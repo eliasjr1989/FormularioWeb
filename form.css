@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400; 0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan+SC&display=swap');
+
+
+body {
+    height: 100%;
+    background: black;
+    display: flex;
+    font-family: "Sedan SC", serif;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.body {
+    background-color: rgb(0, 0, 0);
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 251, 0, 0.418);
+    border-radius: 15px;
+    transition: 0.2s;
+    padding: 20px;
+}
+
+.body:hover {
+    box-shadow: 0 0 25px rgb(207, 204, 13), 0 0 15px rgb(207, 204, 13) inset;
+}
+
+.leyend {
+    color: white;
+}
+
+.header-title {
+    color: white;
+    font-size: 40px;
+    text-shadow: 10px 10px 40px rgb(255, 251, 0);
+}
+
+.header-paragraph {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px;
+    text-shadow: 0 0 20px rgb(207, 204, 13);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-image: radial-gradient(rgb(0, 0, 0), rgba(207, 204, 13, 0.562), rgb(0, 0, 0));
+}
+
+.form:hover {
+    box-shadow: 0 0 25px rgb(207, 204, 13), 0 0 15px rgb(207, 204, 13) none;
+}
+
+.form-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-list {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    margin: auto;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+input:hover {
+    color: rgb(207, 204, 13);
+    box-shadow: 0 0 25px rgb(207, 204, 13), 0 0 15px rgb(207, 204, 13) inset;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+button {
+    padding: 8px 20px;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin: 25px 50px 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #1a1a1a;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(120deg, transparent, rgb(207, 204, 13), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 4px solid transparent;
+    box-sizing: border-box;
+    pointer-events: none;
+    animation: move-border 2s linear infinite;
+}
+
+@keyframes move-border {
+    0% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+        border-color: transparent;
+    }
+    25% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%);
+        border-color: currentColor;
+    }
+    50% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        border-color: currentColor;
+    }
+    75% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        border-color: currentColor;
+    }
+    100% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%);
+        border-color: transparent;
+    }
+}
+
+.btn1 {
+    --neon-color: rgb(207, 204, 13);
+    color: rgb(207, 204, 13);
+}
+
+.btn1::after {
+    border-color: var(--neon-color);
+    border-radius: 20px;
+}
+
+.btn1:hover {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px 5px var(--neon-color);
+}
+
+.btn1::before {
+    background: linear-gradient(to bottom, rgba(207, 204, 13, 0.116), rgba(207, 204, 13, 0.26));
+    height: 100%;
+    bottom: 0;
+    top: auto;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn1:hover::before {
+    transform: translateY(0);
+}
+
+
+.form-nav {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-nav-links {
+    color: white;
+    text-decoration: none;
+    margin-top: 40px;
+    transition: 0.2s;
+}
+
+.form-nav-links:hover {
+    color: rgb(207, 204, 13);
+    text-shadow: 0 0 20px rgb(207, 204, 13);
+}
+
+.form-nav-links a:hover {
+    color: rgb(207, 204, 13);
+}
+
+.form-nav-links a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
